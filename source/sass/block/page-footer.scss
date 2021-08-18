@@ -1,0 +1,95 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  min-height: 50vh;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.page-footer__title {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5em;
+  color: $primary-color-dark;
+}
+
+.page-footer__social-item {
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14vw;
+    pointer-events: none;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 0.1;
+  }
+}
+
+.page-footer__social-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+.page-footer__social-link {
+  position: relative;
+  background-color: $white;
+  display: flex;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  color: $primary-text-color;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 4em;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  transition: background 0.25s;
+}
+
+.js-tilt-glare {
+  border-radius: 10px;
+}
+
+.page-footer__social-link-messanger:hover {
+  background: #0084ff;
+}
+
+.page-footer__social-link-telegram:hover {
+  background: #25a4e2;
+}
+
+.page-footer__social-link-whatsapp:hover {
+  background: #00e676;
+}
+
+.page-footer__social-link-skype:hover {
+  background: #00aef3;
+}
+
+.page-footer__social-link .fab {
+  transition: 0.25s;
+  pointer-events: none;
+}
+
+.page-footer__social-link:hover .fab {
+  color: $white;
+  transform: scale(1.5) translateZ(50px);
+}
+

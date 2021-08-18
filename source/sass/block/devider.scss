@@ -1,0 +1,36 @@
+.divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider-top .divider-image {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+  transform: rotateY(180deg);
+
+  @include tablet {
+    height: 50px;
+  }
+
+  @include desktop {
+    height: 76px;
+  }
+}
+
+.divider-top .shape-fill--light {
+  fill: $white;
+}
+
+.divider-top .shape-fill--dark {
+  fill: $dark-grey-background;
+}
+
+.divider-top .shape-fill--bright {
+  fill: $menu-third;
+}

@@ -1,0 +1,115 @@
+.digital-marketing {
+  position: relative;
+  background: linear-gradient(45deg, $menu-font-purple, $menu-third);
+  background-attachment: fixed;
+  padding: 5rem 0 5rem 0;
+}
+
+.digital-marketing__title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1.5em;
+  color: $white;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.digital-marketing__list {
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.digital-marketing__item {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  margin-bottom: 20px;
+  background: $white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+
+  @include tablet {
+    width: 45%;
+  }
+
+  @include desktop {
+    width: 23%;
+  }
+}
+
+.digital-marketing__item-title-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 30%;
+  background: $black;
+  border-radius: 0 0 50% 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.digital-marketing__item-title {
+  @include margin-padding-zero;
+  font-size: 1.5rem;
+  color: $white;
+}
+
+.digital-marketing__item-features-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.digital-marketing__item-feature {
+  position: relative;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  font-size: 1em;
+  line-height: 1.5em;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: -30px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/check2-circle.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.digital-marketing__item:nth-child(1) .digital-marketing__item-title-wrapper {
+  background-color: $menu-third;
+}
+
+.digital-marketing__item:nth-child(2) .digital-marketing__item-title-wrapper {
+  background-color: $menu-second;
+}
+
+.digital-marketing__item:nth-child(3) .digital-marketing__item-title-wrapper {
+  background-color: $menu-fourth;
+}
+
+.digital-marketing__item:nth-child(4) .digital-marketing__item-title-wrapper {
+  background-color: $menu-first;
+}
+
+.digital-marketing__list:hover .digital-marketing__item {
+  filter: blur(20px);
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.digital-marketing__list .digital-marketing__item:hover {
+  filter: blur(0);
+  transform: scale(1.1);
+  opacity: 1;
+}

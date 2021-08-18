@@ -1,0 +1,110 @@
+.my-features {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $dark-grey-background;
+  padding-top: 5rem;
+}
+
+.my-features__title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5em;
+  color: $primary-color-dark;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.my-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+
+.my-features-item-icon-container {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.my-features-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 25%;
+  }
+}
+
+.my-features-item__icon-element {
+  background-color: $primary-color;
+  display: inline-block;
+  height: 100%;
+  width: calc(100% * 0.57735);
+
+  &::before {
+    background-color: inherit;
+    content: "";
+    height: inherit;
+    position: absolute;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    top: 0;
+    transform: rotateZ(60deg);
+    width: inherit;
+  }
+
+  &::after {
+    background-color: inherit;
+    content: "";
+    height: inherit;
+    position: absolute;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    top: 0;
+    transform: rotateZ(-60deg);
+    width: inherit;
+  }
+}
+
+.my-features__icon-proficient {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  top: calc(50% - 25px);
+}
+
+.my-features__icon-proficient--wide {
+  left: calc(50% - 32px);
+  top: calc(50% - 32px);
+}
+
+
+.my-features-item-icon {
+  fill: $white;
+}
+
+.my-features-item__title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+
+  color: $secondary-text-color;
+}
+

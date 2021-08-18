@@ -1,0 +1,104 @@
+.my-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $dark-grey-background;
+  padding-bottom: 5rem;
+}
+
+.my-stack__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  @include tablet {
+    width: 768px;
+  }
+}
+
+.my-stack__item-title {
+  @include margin-padding-zero;
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: $white;
+  font-size: 1.5em;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.my-stack__item-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: $menu-third;
+}
+
+.my-satck__item-chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  background-color: $primary-color-dark;
+}
+
+.my-stack__item:nth-child(1) .my-satck__item-chart {
+  width: 90%;
+  animation-delay: 0s;
+}
+
+.my-stack__item:nth-child(2) .my-satck__item-chart {
+  width: 85%;
+  animation-delay: 0.05s;
+}
+
+.my-stack__item:nth-child(3) .my-satck__item-chart {
+  width: 60%;
+  animation-delay: 1s;
+}
+
+.my-stack__item:nth-child(4) .my-satck__item-chart {
+  width: 40%;
+  animation-delay: 1.5s;
+}
+
+.my-stack__item:nth-child(5) .my-satck__item-chart {
+  width: 30%;
+  animation-delay: 2s;
+}
+
+.my-stack__item:nth-child(6) .my-satck__item-chart {
+  width: 70%;
+  animation-delay: 2.5s;
+}
+
+.my-stack__item:nth-child(7) .my-satck__item-chart {
+  width: 30%;
+  animation-delay: 3s;
+}
+
+.my-satck__item-chart--animation {
+  animation: chart 1.25s cubic-bezier(0.17, 0.67, 0, 1);
+}
+
+@keyframes chart {
+  0% {
+    left: -400px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
