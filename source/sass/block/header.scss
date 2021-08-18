@@ -1,0 +1,11 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 5rem;
+  width: 100px;
+  border-radius: 50%;
+  z-index: 5;
+}

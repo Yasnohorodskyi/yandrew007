@@ -1,1 +1,18 @@
-// Начните писать стили здесь
+// global blocks
+@import "global/fonts";
+@import "global/global";
+@import "global/variables";
+@import "global/mixins";
+// @import "global/test";
+
+// common block for pages
+@import "block/page";
+@import "block/container";
+@import "block/main-nav";
+@import "block/header";
+@import "block/about-me";
+@import "block/devider";
+@import "block/my-features";
+@import "block/my-stack";
+@import "block/digital-marketing";
+@import "block/page-footer";

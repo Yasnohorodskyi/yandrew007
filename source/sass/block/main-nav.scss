@@ -1,0 +1,97 @@
+.page-header__nav {
+  background-color: $background-menu;
+}
+
+
+.main-nav {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main-nav__list {
+  position: relative;
+  z-index: 4;
+
+  @include margin-padding-zero;
+}
+
+
+.main-nav__item {
+  text-align: center;
+  list-style: none;
+}
+
+.main-nav__link {
+  color: $white;
+  display: inline-flex;
+  padding: 20px 20px;
+  font-size: 3em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: $light;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+
+    @include tablet {
+      font-size: 3em;
+    }
+
+    @include desktop {
+      font-size: 5em;
+    }
+  }
+
+  &:hover::before {
+    content: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 1800px;
+    height: 1800px;
+  }
+}
+
+.main-nav__list:hover .main-nav__link {
+  color: $white;
+}
+
+.main-nav__item:hover .main-nav__link {
+  color: $black;
+}
+
+.main-nav__item:nth-child(4n+1) .main-nav__link::before {
+  background: $menu-first;
+}
+
+.main-nav__item:nth-child(4n+2) .main-nav__link::before {
+  background: $menu-second;
+}
+
+.main-nav__item:nth-child(4n+3) .main-nav__link::before {
+  background: $menu-third;
+}
+
+.main-nav__item:nth-child(4n+4) .main-nav__link::before {
+  background: $menu-fourth;
+}
+

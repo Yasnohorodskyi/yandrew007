@@ -1,0 +1,119 @@
+.about-me {
+  display: flex;
+  padding-top: 100px;
+  min-height: 100%;
+  background: $white;
+  margin-bottom: 50px;
+}
+
+.about-me__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+  background-color: $white;
+
+  @include tablet {
+    min-height: 100%;
+  }
+
+  @include desktop {
+    width: 1050px;
+  }
+}
+
+
+.about-me__content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin-bottom: 20px;
+
+  @include tablet {
+    position: relative;
+    flex-direction: row-reverse;
+    min-height: 300px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    min-height: 450px;
+    font-size: 1.2em;
+  }
+}
+
+.about-me__title {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5em;
+  color: $background-menu;
+
+  @include margin-padding-zero;
+  margin-bottom: 1.5em;
+
+  @include tablet {
+    position: absolute;
+    right: 50px;
+    width: 50%;
+    text-align: right;
+  }
+
+  @include desktop {
+    font-size: 3em;
+  }
+}
+
+.about-me__description {
+  @include margin-padding-zero;
+  display: flex;
+  font-size: 1em;
+  line-height: 1.5;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  box-shadow: 5px 5px 12px -2px rgba(117, 117, 117, 0.55);
+  background-color: $primary-color-light;
+
+  @include tablet {
+    position: absolute;
+    box-sizing: content;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 20px 20px 20px 60px;
+  }
+}
+
+.about-me__image-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 12px -2px rgba(117, 117, 117, 0.55);
+  overflow: hidden;
+
+  @include tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    z-index: 2;
+    margin-bottom: 0;
+  }
+}
+
+.about-me__image {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
